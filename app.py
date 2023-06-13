@@ -95,7 +95,7 @@ def main():
     
     
     # Load the dataset
-    filepath = 'Training.csv"
+    filepath = 'Training.csv'
     df = pd.read_csv(filepath)
     le = LabelEncoder()
     df['prognosis'] = le.fit_transform(df['prognosis'])
@@ -113,7 +113,7 @@ def main():
     X_test = sc.transform(X_test)
 
     # Read the symptom data for prediction
-    filepath = 'Testing.csv"
+    filepath = 'Testing.csv'
     df1 = pd.read_csv(filepath)
     df1['prognosis'] = le.transform(df1['prognosis'])
     a = df1.iloc[:, :-2]
