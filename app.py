@@ -42,6 +42,8 @@ def naive_bayes(X_train, X_test, y_train, y_test, le, a):
     st.success('Predicted disease: ' + le.inverse_transform(out)[0])
     description(out)
     precaution(out, le)
+    accuracy = accuracy_score(y_test, model.predict(X_test))*100
+    st.write(" Accuracy:", accuracy)
 
      # #implementing decision tree
 def decision_tree(X_train,X_test,y_train,y_test,a,le):
@@ -60,6 +62,8 @@ def decision_tree(X_train,X_test,y_train,y_test,a,le):
      st.success( le.inverse_transform(out)[0])
      description(out)
      precaution(out,le)
+     accuracy = accuracy_score(y_test, tr.predict(X_test))*100
+     st.write(" Accuracy:", accuracy)
 
 
 
@@ -75,6 +79,8 @@ def random_forest(X_train,X_test,y_train,y_test,a,le):
      st.success(le.inverse_transform(out)[0])
      description(out)
      precaution(out,le)
+     accuracy = accuracy_score(y_test, rc.predict(X_test))*100
+     st.write(" Accuracy:", accuracy)
 
 
 
@@ -90,6 +96,8 @@ def gradientboost(X_train,X_test,y_train,y_test,a,le):
      st.success(le.inverse_transform(out)[0])
      description(out)
      precaution(out,le)
+     accuracy = accuracy_score(y_test, gbc.predict(X_test))*100
+     st.write(" Accuracy:", accuracy)
 
 def main():
     
