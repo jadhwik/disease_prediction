@@ -8,7 +8,7 @@ from streamlit_lottie import st_lottie
 import json
 import requests
 import base64
-
+from sklearn.metrics import accuracy_score
 
 
 
