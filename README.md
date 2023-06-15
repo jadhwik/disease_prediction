@@ -12,4 +12,4 @@ Algorithms used
 
 
 link to my app -https://adhwikj-disease-prediction-app-e2jgoo.streamlit.app/
-lin2 -https://adhwikj-disease-prediction-app2-ba3ymh.streamlit.app/
+link2 -https://adhwikj-disease-prediction-app2-ba3ymh.streamlit.app/
