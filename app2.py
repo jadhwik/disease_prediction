@@ -113,6 +113,12 @@ def main():
     y = df['prognosis'].values
 
     # Split the dataset into train and test sets
+    from sklearn.model_selection import StratifiedKFold
+    fold=StratifiedKFold(n_splits=3,shuffle=True,random_state=42)
+
+    for test_index,train_index in fold.split(X,y):
+    
+        X_test,X_train,y_test,y_train=X[test_index],X[train_index],y[test_index],y[train_index]
 
 
     # Standardize the data
