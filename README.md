@@ -11,4 +11,4 @@ Algorithms used
 4. Gradient boosting
 
 
-link to my app -https://adhwikj-disease-prediction-app-ktxhg0.streamlit.app/
+link to my app -https://adhwikj-disease-prediction-app-e2jgoo.streamlit.app/
