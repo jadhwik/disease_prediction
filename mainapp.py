@@ -14,7 +14,7 @@ import numpy as np
 
 
 def description(out):
-    filename = r'C:\Users\91984\Desktop\project\main\symptom_Description.csv'
+    filename = 'symptom_Description.csv'
     df = pd.read_csv(filename)
     le = LabelEncoder()
     df['Disease'] = le.fit_transform(df['Disease'])
@@ -25,7 +25,7 @@ def description(out):
         st.info(details[result])
 
 def precaution(out, le):
-    filename =r'C:\Users\91984\Desktop\project\main\precaution.csv'
+    filename ='precaution.csv'
     df = pd.read_csv(filename)
     df['DISEASE'] = le.fit_transform(df['DISEASE'])
     details = dict(zip(df['DISEASE'], df['PRECAUTION']))
@@ -96,7 +96,7 @@ def main():
     
     
     # Load the dataset
-    filepath = r"C:\Users\91984\Desktop\project\main\training.csv"
+    filepath = "Training.csv"
     df = pd.read_csv(filepath)
     le = LabelEncoder()
     df['prognosis'] = le.fit_transform(df['prognosis'])
@@ -120,7 +120,7 @@ def main():
     X_test = sc.transform(X_test)
 
     # Read the symptom data for prediction
-    filepath =  r"C:\Users\91984\Desktop\project\main\testing.csv"
+    filepath ="Testing.csv"
     df1 = pd.read_csv(filepath)
     df1['prognosis'] = le.transform(df1['prognosis'])
     a = df1.iloc[:, :-2]
